@@ -1,0 +1,97 @@
+<DOCTYPE! html>
+<html>
+
+<head>
+<style>
+
+/* Top-level menu */
+ .menu a {
+    text-decoration: none;
+    /* to remove the underline from the link itself */
+}
+.menu a:hover {
+    background-color:green;
+}
+.menu ul {
+    /* This will be margin and padding for both main menu and submenu, changing these settings will move the main menu and submenu out of line with each other */
+    margin: 0;
+    padding: 0;
+}
+.menu ul li {
+    margin:0;
+    /*margin and padding will move line items for both menus */
+    padding: 0;
+    display:inline-block;
+    /* so that it displays horizontally, this also removes the list-style*/
+    position: relative;
+    /* must have a position to be able to position other elements in relation to it */
+}
+/*border radius and background color, all the things to do to the links themselves is done here */
+ .menu ul li a {
+    padding: 10px 30px;
+    background-color:black;
+    display: block;
+    border-radius:15px
+}
+/* Dropdown Menu */
+ .menu ul li ul {
+    position: absolute;
+    /*this causes the dropdown to appear below the parent menu as opposed to expanding the menu to include the submenu */
+    display: none;
+    /*IMPORTANT - this is what causes the link to not appear until you hover over it */
+}
+/* this is the line that causes the submenu to appear */
+ .menu ul li:hover ul {
+    display: block;
+}
+.menu ul li ul li {
+    /*using this line will only affect the submenu, for example here I have added a 15px margin to space the links out father vertically*/
+    margin:15px;
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="menu">
+    <ul>
+        <li><a href="#">Link</a>
+
+        </li>
+        <li> <a href="#">Link</a>
+
+            <ul>
+                <li><a href="#">Submenu</a>
+
+                </li>
+                <li><a href="#">Submenu</a>
+
+                </li>
+            </ul>
+        </li>
+        <li><a href="#">Link</a>
+
+        </li>
+    </ul>
+</div>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+           
+
+
+
+
+
+
+
+</body>
