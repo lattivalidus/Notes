@@ -1,0 +1,18 @@
+Display possibilities for Javascript
+
+window.alert() will pull up a pop-up window with whatever you want written in it. This can probably be combined with an action, example also had math in it for some reason?
+
+document.write() will re-write all html, can I combine with with a div to re-write the div? "should be used only for testing"
+
+innerHTML
+document.getElementById(id)
+
+
+if using script in the body, must also put the script tag in the body as opposed to keeping it in the head like you would for css
+
+you can use "//" to the left of script in a line to make notes or between /* and */. if using the // be sure that you are within the <script> tag or it may not be recognized by the html as a comment
+
+Script is fucking case sensitive, fuck. by the way it also looks like it is run from top to bottom so if you have 2 items that identify the same thing, the farthest one down will be the one you see
+
+hyphens are not allowed in javascript because it literally means "subtract"
+

@@ -43,7 +43,8 @@
 /* this is the line that causes the submenu to appear */
  .menu ul li:hover ul {
     display: block;
-}
+} /*Upon asking a friend, there is no way to make the submenu stay without using jquery. I will leave this as an example for future reference */
+
 .menu ul li ul li {
     /*using this line will only affect the submenu, for example here I have added a 15px margin to space the links out father vertically*/
     margin:15px;
