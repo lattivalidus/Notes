@@ -1,16 +1,19 @@
 
 <head>
 
-nav ul li{
+nav ul li {
     display:inline-block;
     padding:15px;
     margin:15px;
+    background-color:black;
+    color:white;
+    /* remember, this will style the text in the list item but will not change anything within the button tag */
+    border-radius:15px;
 }
-
-.desc{
-    
+/*styling the buttons if you don't use the "button" tage*/
+ nav ul li:hover {
+    background:green;
 }
-
 
 </head>
 
@@ -19,40 +22,60 @@ nav ul li{
 
 <body>
 
+<!-- here I have set up a menu that points to a blank space below so that you can select the different options and have text or pictures appear in that space without refreshing the page. The first item is set up as a line item that acts as a button, and the remainder are just standard button tags -->
 <nav>
     <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-        <li>Item 4</li>
-        <li>Item 5</li>
+        <!-- the 'onclick' item nested in the line item points to a specific function in the script below. -->
+        <li onclick="item1Function()">Item 1</li>
+        <!--this is the script that the 'onclick' is pointing to, normally this would be at the bottom of the page under a single 'script' tag. 'onclick' and 'function' must be the same for them to communicate-->
+        <script>
+            function item1Function() {
+                document.getElementById("body").innerHTML = "item one is a go";
+            }
+            <!--"body" is used as an ID to point to where you want the action to take place, in this case I have identified a 'p' tag to host the text. But you could also use a div or whatever --> 
+            <!--'innerHTML' will mean that you are putting whatever the command is within the html, in this case it is a sentence which must be in quotation marks -->
+            <!-- The list item is the button to make something happen, the ID is where it happens, .inner means it happens within the ID -->
+            <!-- NEVER FORGET THE COLON ":" ITS LIKE REALLY FREAKING IMPORTANT!!!-->
+        </script>
+        <li>
+            <button type="button" onclick="item2Function()">Item 2</button>
+        </li>
+        <li>
+            <button type="button" onclick="item3Function()">Item 3</button>
+        </li>
+        <li>
+            <button type="button" onclick="item4Function()">Item 4</button>
+        </li>
+        <li>
+            <button type="button" onclick="item5Function()">Item 5</button>
+        </li>
     </ul>
-</nav>  
-
-<p> other things to see if I can delete specific stuff</p>
-
+</nav>
+<!--END OF LIST -->
+<!--Body where the scripts take place -->
 <div>
-   
-    <p id="demo"></p>
+    <p id="body">Select from the options above to view information.</p>
+</div>
+<div>
+    <script>
+        <!-- I have listed out the remainder of the javascripts here -->   
 
+        function item2Function() {
+            document.getElementById("body").innerHTML = "item two is a go";
+        }
 
-    <p id="demo"></p>
-   <p id="myPar">I am a paragraph.</p>
-<div id="myDiv">I am a div.</div>
+        function item3Function() {
+            document.getElementById("body").innerHTML = "item three is a go";
+        }
 
-<p>
-<button type="button" onclick="myFunction()">Try it</button>
-</p>
-    <p> <button type="button" onclick="myFunction()">my turn</button>
-<script>
-function myFunction() {
-    document.getElementById("myPar").innerHTML = "Hello Dolly.";
-    document.getElementById("myDiv").innerHTML = "How are you?";
-    document.getElementById("myturn").innerHTML = "My Turn";
-}
- 
-</script>
-    
+        function item4Function() {
+            document.getElementById("body").innerHTML = "item four is a go";
+        }
+
+        function item5Function() {
+            document.getElementById("body").innerHTML = "item five is a go";
+        }
+    </script>
 </div>
 
 </body>
