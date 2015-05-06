@@ -1,0 +1,57 @@
+<DOCTYPE! html>
+<html>
+<head>
+<style>
+
+/* MENU USING UNORDERED LISTS */
+
+/*you will see that if you use this display option, you can center the list and keep the line items responsive; however, the list will jump around to re-size as you hover over individual links. */
+
+.list1 {
+    text-align:center;
+}
+ .list1 li {
+    display:inline-block;
+    margin:15px;
+    padding:15px;
+}
+.list1 li:hover {
+    font-size:150%;
+}
+/*MENU USING DIVS*/
+
+/* Using divs for the links you can keep the menu from shifting when you hover over them, but to keep it responsive you cannot center the items without defining a size for the parent div */
+ .list2 {
+    text-align:center;
+}
+.divlist {
+    float:left; 
+    margin:15px;
+    padding:15px;
+    width:80px;
+    height:80px;
+    /*by specifying the size of the div holding your text, you allow for the font-size to grow without moving the other divs around*/
+}
+.divlist:hover {
+    Font-size:150%;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- MENU USING UNORDERED LIST -->
+<ul class="list1">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>item 3</li>
+</ul>
+<!--MENU USING DIVS -->
+<div class="list2">
+    <div class="divlist">Item 1</div>
+    <div class="divlist">Item 2</div>
+    <div class="divlist">Item 3</div>
+</div>
+</body>
+</html>
