@@ -2,15 +2,13 @@
 <html>
 <head>
 <style>
-
 /* MENU USING UNORDERED LISTS */
 
 /*you will see that if you use this display option, you can center the list and keep the line items responsive; however, the list will jump around to re-size as you hover over individual links. */
-
-.list1 {
+ .list1 {
     text-align:center;
 }
- .list1 li {
+.list1 li {
     display:inline-block;
     margin:15px;
     padding:15px;
@@ -20,21 +18,27 @@
 }
 /*MENU USING DIVS*/
 
-/* Using divs for the links you can keep the menu from shifting when you hover over them, but to keep it responsive you cannot center the items without defining a size for the parent div */
+/* Using divs for the links you can keep the menu from shifting when you hover over them. */
+/*By using percent for the font and div size, you can (margin:0 auto) to center it */
  .list2 {
-    text-align:center;
+    width:50%;
+    margin:0 auto;
 }
 .divlist {
-    float:left; 
-    margin:15px;
-    padding:15px;
-    width:80px;
-    height:80px;
-    /*by specifying the size of the div holding your text, you allow for the font-size to grow without moving the other divs around*/
+    display:table-cell; /*allows the div to work as a table cell and gives access to vert-align*/
+    vertical-align:middle;
+    position:relative;
+    text-align:center;
+    margin:0 auto;
+    width:100px;
+    height:100px;
+    border:1px solid black;
+    /*by specifying the size of the div holding your text, you allow for the font-size to grow without moving the other divs around (width:20%;height:20%)*/
 }
 .divlist:hover {
     Font-size:150%;
 }
+
 
 </style>
 </head>
